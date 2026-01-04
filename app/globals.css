@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Use a soft neutral light background and readable text */
+:root {
+  --background-color: 245, 245, 245; /* Light grey */
+  --text-color: 24, 24, 27; /* Near black */
+}
+
+/* Remove this block if you don't want automatic dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: 245, 245, 245; /* Keep light even in dark mode */
+    --text-color: 24, 24, 27;
+  }
+}
+
+body {
+  background-color: rgb(var(--background-color));
+  color: rgb(var(--text-color));
+  @apply min-h-screen font-sans antialiased;
+}
